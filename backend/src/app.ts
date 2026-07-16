@@ -13,7 +13,10 @@ const PORT = process.env.PORT || 5000;
 // Enable CORS
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "http://localhost:5173"],
+    origin: (origin, callback) => {
+      // Allow all origins dynamically (necessary when credentials: true is set)
+      callback(null, true);
+    },
     credentials: true,
   })
 );
