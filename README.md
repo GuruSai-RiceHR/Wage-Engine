@@ -4,7 +4,6 @@
 [![React v18](https://img.shields.io/badge/React-v18-blue.svg)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15%2B-blue.svg)](https://www.postgresql.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An enterprise-ready **Wage Compliance and Restructuring Engine** built to validate and align Indian corporate payroll models with the **Code on Wages, 2019** (scheduled statutory enforcement). The application features a clean React dashboard, an Express.js API, and a robust PostgreSQL database with auditing capabilities.
 
@@ -90,7 +89,7 @@ CREATE DATABASE wage_engine;
    ```env
    PORT=5000
    DATABASE_URL=postgresql://<db_user>:<db_password>@localhost:5432/wage_engine
-   JWT_SECRET=ricehr_secret_key_2024_typescript
+   JWT_SECRET=your_secret_key
    NODE_ENV=development
    ```
 4. Start the development server (runs auto-migrations on start):
@@ -135,6 +134,3 @@ To test **Dynamic Mode** with custom components:
 3. Use the bypass payment token: **`123456789`**.
 
 ---
-
-## ⚖️ License
-Distributed under the MIT License. See `LICENSE` for more information.
