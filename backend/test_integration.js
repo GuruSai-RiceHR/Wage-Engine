@@ -1,5 +1,5 @@
 async function runTests() {
-  const API_URL = "http://localhost:5000/api";
+  const API_URL = process.argv[2] || process.env.API_URL || "http://localhost:5000/api";
   console.log("🧪 Starting Integration Tests on " + API_URL);
 
   try {
