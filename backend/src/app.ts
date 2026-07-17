@@ -14,8 +14,12 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow all origins dynamically (necessary when credentials: true is set)
-      callback(null, true);
+      // Allow localhost and Vercel subdomains dynamically
+      if (!origin || origin.startsWith("http://localhost") || origin.endsWith("vercel.app")) {
+        callback(null, origin || true);
+      } else {
+        callback(null, false);
+      }
     },
     credentials: true,
   })
