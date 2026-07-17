@@ -4,6 +4,7 @@ node_modules/
 /dist-ssr
 /backend/dist
 /frontend/dist
+/docs
 
 # Environment variables & secrets
 .env
